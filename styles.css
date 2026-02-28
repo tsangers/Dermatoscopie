@@ -61,6 +61,9 @@ button:disabled { opacity:.45; cursor:not-allowed; }
 button.ghost { background:#eef2f8; color:#20324f; }
 .inline-actions { display:flex; gap:10px; margin-top:12px; }
 .hint { color:var(--muted); font-size:13px; margin:8px 0 0; }
+.intro { color: var(--muted); margin: 8px 0; line-height: 1.5; }
+.intro a { color: #005fa3; font-weight: 600; text-decoration: none; }
+.intro a:hover { text-decoration: underline; }
 .quiz-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
 .score-chip { background:#eff6ff; color:#1e3a8a; border:1px solid #dbeafe; border-radius:999px; padding:6px 12px; font-weight:700; }
 .lesion {

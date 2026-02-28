@@ -50,7 +50,7 @@ function startModuleSet(moduleKey, setIndex) {
   session = {
     moduleKey,
     setIndex,
-    title: `${MODULES[moduleKey].title} · Set ${setIndex + 1}`,
+    title: `${MODULES[moduleKey].title} · Ronde ${setIndex + 1}`,
     labels: labelsForQuestions(questions),
     questions,
     i: 0,
@@ -183,7 +183,7 @@ function renderModules() {
       sets.forEach((_, i) => {
         const b = document.createElement('button');
         b.className = 'ghost';
-        b.textContent = `Set ${i + 1}`;
+        b.textContent = `Ronde ${i + 1}`;
         b.onclick = () => startModuleSet(key, i);
         setBar.appendChild(b);
       });
