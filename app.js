@@ -121,7 +121,7 @@ function finish() {
 
   els.quizView.hidden = true;
   els.summaryView.hidden = false;
-  els.summaryText.textContent = `Score: ${session.score}/${total} (${pct}%).`;
+  els.summaryText.textContent = `Uw score: ${session.score}/${total} (${pct}%).`;
 
   if (pct >= 85) els.motivation.textContent = 'Sterk werk. Je patroonherkenning is scherp.';
   else if (pct >= 65) els.motivation.textContent = 'Goed bezig. Met nog een set word je direct consistenter.';
