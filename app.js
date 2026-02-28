@@ -197,6 +197,12 @@ function renderModules() {
 async function boot() {
   const res = await fetch('./data/isic_quiz_sets.json');
   db = await res.json();
+
+  // User request: remove Set 1 from BCC vs Bowen
+  if (Array.isArray(db?.modules?.bcc_vs_bowen) && db.modules.bcc_vs_bowen.length > 0) {
+    db.modules.bcc_vs_bowen = db.modules.bcc_vs_bowen.slice(1);
+  }
+
   renderModules();
 }
 
