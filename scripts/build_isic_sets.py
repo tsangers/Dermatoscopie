@@ -2,22 +2,16 @@
 from __future__ import annotations
 
 """
-Robuust dataset-script voor Stichting HUID dermatoscopie-oefenplatform.
+Stichting HUID - robuuste dataset builder (histopathology-only).
 
-Doel:
-- Vaste (deterministische) quizsets genereren
-- Geen random samenstelling in de app
-- Resume/checkpoint + retry
-
-Bronnen:
-- ISIC API v2 lesions endpoint (sterk voor melanoma/nevus/bcc/AK)
-- ISIC API v2 image search endpoint (voor sebaceous hyperplasia en bowen/scc in situ)
+Belangrijk:
+- Alleen histopathology-geverifieerde laesies
+- Vaste (deterministische) quizsets, geen random
+- Meerdere sets per module
 """
 
 import json
-import re
 import time
-from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List
 
@@ -27,13 +21,18 @@ BASE = Path('/home/tobias/.openclaw/workspace/dermatoscopie-oefenplatform/data')
 OUT_PATH = BASE / 'isic_quiz_sets.json'
 CK_PATH = BASE / 'isic_checkpoint.json'
 
-RETRIES = 5
-TARGET_PER_LABEL = 15  # 3 sets x 5 per klasse
-
-LABELS = ['melanoma', 'nevus', 'bcc', 'sebaceous_hyperplasia', 'actinic_keratosis', 'bowen']
-
-LESIONS_URL = 'https://api.isic-archive.com/api/v2/lesions/?limit=200'
 SEARCH_URL = 'https://api.isic-archive.com/api/v2/images/search/'
+RETRIES = 5
+TARGET_PER_LABEL = 15  # 3 sets x 5 per label
+
+LABEL_QUERIES = {
+    'melanoma': 'diagnosis_3:"Melanoma, NOS"',
+    'nevus': 'diagnosis_3:"Nevus"',
+    'bcc': 'diagnosis_3:"Basal cell carcinoma"',
+    'sebaceous_hyperplasia': 'diagnosis_3:"Sebaceous hyperplasia"',
+    'actinic_keratosis': 'diagnosis_3:"Solar or actinic keratosis"',
+    'bowen': 'diagnosis_3:"Squamous cell carcinoma in situ"',
+}
 
 
 def fetch_json(url: str, params=None):
@@ -68,140 +67,69 @@ def is_dermoscopic(meta: dict) -> bool:
     return (not t) or ('dermo' in t)
 
 
-def lesion_to_case(img: dict, label: str) -> dict | None:
-    image_url = ((img.get('files') or {}).get('full') or {}).get('url', '')
-    isic_id = img.get('isic_id', '')
-    if not image_url or not isic_id:
-        return None
-    if not is_dermoscopic(img.get('metadata') or {}):
-        return None
-    return {
+def is_histopathology(clinical: dict) -> bool:
+    conf = str(clinical.get('diagnosis_confirm_type', '')).lower()
+    return 'histopath' in conf
+
+
+def add_case(bucket: List[dict], seen: set, label: str, r: dict):
+    isic_id = r.get('isic_id', '')
+    if not isic_id or isic_id in seen:
+        return
+
+    meta = r.get('metadata') or {}
+    clinical = meta.get('clinical') or {}
+    if not is_dermoscopic(meta):
+        return
+    if not is_histopathology(clinical):
+        return
+
+    img = ((r.get('files') or {}).get('full') or {}).get('url', '')
+    if not img:
+        return
+
+    bucket.append({
         'id': isic_id,
-        'imageUrl': image_url,
+        'imageUrl': img,
         'diagnosis': label,
-        'source': 'APIv2-lesions'
-    }
+        'source': 'histopathology'
+    })
+    seen.add(isic_id)
 
 
-def add_case(buckets: Dict[str, List[dict]], counts: Dict[str, int], label: str, case: dict | None):
-    if not case:
-        return
-    if counts[label] >= TARGET_PER_LABEL:
-        return
-    if any(x['id'] == case['id'] for x in buckets[label]):
-        return
-    buckets[label].append(case)
-    counts[label] += 1
+def harvest_label(label: str, query: str, state: dict, target: int) -> List[dict]:
+    bucket = state.get('buckets', {}).get(label, [])
+    seen = set(x['id'] for x in bucket)
 
-
-def done_pair(counts, a, b):
-    return counts[a] >= TARGET_PER_LABEL and counts[b] >= TARGET_PER_LABEL
-
-
-def done_all(counts):
-    return all(counts[l] >= TARGET_PER_LABEL for l in LABELS)
-
-
-def map_lesion_label(lesion: dict) -> str | None:
-    txt = ' | '.join([
-        str(lesion.get('outcome_diagnosis', '')),
-        str(lesion.get('outcome_diagnosis_1', '')),
-    ]).lower()
-
-    if 'actinic keratosis' in txt:
-        return 'actinic_keratosis'
-    if 'basal cell carcinoma' in txt:
-        return 'bcc'
-    if 'melanoma' in txt:
-        return 'melanoma'
-    if 'nevus' in txt or 'naevus' in txt:
-        return 'nevus'
-    if 'bowen' in txt or 'squamous cell carcinoma in situ' in txt:
-        return 'bowen'
-    return None
-
-
-def harvest_from_lesions(state, buckets, counts):
-    url = state.get('lesions_url') or LESIONS_URL
-    scanned = int(state.get('scanned_lesions', 0))
-
-    while url and scanned < 50000 and not (
-        done_pair(counts, 'melanoma', 'nevus') and
-        counts['bcc'] >= TARGET_PER_LABEL and
-        counts['actinic_keratosis'] >= TARGET_PER_LABEL
-    ):
-        j = fetch_json(url)
-        res = j.get('results', [])
-        if not res:
-            break
-
-        for lesion in res:
-            scanned += 1
-            label = map_lesion_label(lesion)
-            if label in ('melanoma', 'nevus', 'bcc', 'actinic_keratosis'):
-                index_id = str(lesion.get('index_image_id') or '')
-                imgs = lesion.get('images', []) or []
-                pick = None
-                for im in imgs:
-                    if str(im.get('isic_id', '')) == index_id:
-                        pick = im
-                        break
-                if pick is None and imgs:
-                    pick = imgs[0]
-                if pick is not None:
-                    case = lesion_to_case(pick, label)
-                    add_case(buckets, counts, label, case)
-
-        url = j.get('next')
-        state['lesions_url'] = url
-        state['scanned_lesions'] = scanned
-
-        if scanned % 1000 < len(res):
-            print(f"lesions scanned={scanned} counts=" + json.dumps(dict(counts), ensure_ascii=False))
-            state['counts'] = dict(counts)
-            state['buckets'] = buckets
-            save_ck(state)
-            time.sleep(0.1)
-
-
-def harvest_by_search(label: str, query: str, state, buckets, counts):
-    k = f'search_url_{label}'
-    next_url = state.get(k)
+    next_key = f'next_{label}'
+    next_url = state.get(next_key)
 
     if next_url:
         j = fetch_json(next_url)
     else:
         j = fetch_json(SEARCH_URL, params={'query': query, 'limit': 200})
 
-    while counts[label] < TARGET_PER_LABEL:
-        res = j.get('results', [])
-        if not res:
+    while len(bucket) < target:
+        results = j.get('results', [])
+        if not results:
             break
 
-        for r in res:
-            case = {
-                'id': r.get('isic_id', ''),
-                'imageUrl': ((r.get('files') or {}).get('full') or {}).get('url', ''),
-                'diagnosis': label,
-                'source': 'APIv2-search'
-            }
-            # filter dermoscopic
-            if not is_dermoscopic((r.get('metadata') or {})):
-                continue
-            add_case(buckets, counts, label, case)
-            if counts[label] >= TARGET_PER_LABEL:
+        for r in results:
+            add_case(bucket, seen, label, r)
+            if len(bucket) >= target:
                 break
 
         next_url = j.get('next')
-        state[k] = next_url
-        state['counts'] = dict(counts)
-        state['buckets'] = buckets
+        state[next_key] = next_url
+        state.setdefault('buckets', {})[label] = bucket
         save_ck(state)
 
         if not next_url:
             break
         j = fetch_json(next_url)
-        time.sleep(0.1)
+        time.sleep(0.08)
+
+    return bucket
 
 
 def build_sets(a: List[dict], b: List[dict], nsets=3, preferred_per_class=5, fallback_per_class=3):
@@ -224,58 +152,52 @@ def build_sets(a: List[dict], b: List[dict], nsets=3, preferred_per_class=5, fal
                 out.append(merged)
         if len(out) == nsets:
             return out
-    return out
+    return []
 
 
 def main():
     BASE.mkdir(parents=True, exist_ok=True)
 
     ck = load_ck() or {}
-    buckets = ck.get('buckets') or {l: [] for l in LABELS}
-    counts = defaultdict(int, ck.get('counts') or {l: 0 for l in LABELS})
-
     state = {
-        'version': 3,
-        'target_per_label': TARGET_PER_LABEL,
-        'lesions_url': ck.get('lesions_url'),
-        'scanned_lesions': ck.get('scanned_lesions', 0),
-        'search_url_sebaceous_hyperplasia': ck.get('search_url_sebaceous_hyperplasia'),
-        'search_url_bowen': ck.get('search_url_bowen'),
-        'counts': dict(counts),
-        'buckets': buckets,
+        'version': 4,
+        'buckets': ck.get('buckets') or {k: [] for k in LABEL_QUERIES.keys()},
     }
+    # keep old next cursors if present
+    for k in LABEL_QUERIES.keys():
+        nk = f'next_{k}'
+        if ck.get(nk):
+            state[nk] = ck[nk]
 
-    # 1) lesions stream for melanoma/nevus/bcc/AK
-    harvest_from_lesions(state, buckets, counts)
+    buckets = state['buckets']
 
-    # 2) targeted search for sebaceous hyperplasia and bowen
-    harvest_by_search('sebaceous_hyperplasia', 'diagnosis_3:"Sebaceous hyperplasia"', state, buckets, counts)
-    harvest_by_search('bowen', 'diagnosis_3:"Squamous cell carcinoma in situ"', state, buckets, counts)
+    # harvest each label with histopathology-only filter
+    for label, query in LABEL_QUERIES.items():
+        buckets[label] = harvest_label(label, query, state, TARGET_PER_LABEL)
+        print(f"{label}: {len(buckets[label])}")
 
     modules = {
-        'mel_vs_nevus': build_sets(buckets['melanoma'], buckets['nevus'], nsets=3, preferred_per_class=5, fallback_per_class=3),
-        'bcc_vs_sh': build_sets(buckets['bcc'], buckets['sebaceous_hyperplasia'], nsets=3, preferred_per_class=5, fallback_per_class=3),
-        'ak_vs_bowen': build_sets(buckets['actinic_keratosis'], buckets['bowen'], nsets=3, preferred_per_class=5, fallback_per_class=3),
+        'mel_vs_nevus': build_sets(buckets['melanoma'], buckets['nevus'], nsets=3),
+        'bcc_vs_sh': build_sets(buckets['bcc'], buckets['sebaceous_hyperplasia'], nsets=3),
+        'ak_vs_bowen': build_sets(buckets['actinic_keratosis'], buckets['bowen'], nsets=3),
     }
 
     set_sizes = {k: [len(s) for s in v] for k, v in modules.items()}
+    counts = {k: len(v) for k, v in buckets.items()}
 
     payload = {
         'meta': {
             'brand': 'Stichting HUID',
-            'audience': 'Huisartsen / AIOS dermatologie',
-            'target_per_label': TARGET_PER_LABEL,
-            'counts': dict(counts),
-            'scanned_lesions': state.get('scanned_lesions', 0),
+            'audience': 'Huisartsen',
+            'verification': 'histopathology only',
+            'counts': counts,
             'set_sizes': set_sizes,
-            'note': 'Vaste quizsets (niet random)'
+            'note': 'Vaste quizsets, deterministisch, geen random selectie'
         },
         'modules': modules,
     }
 
     OUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
-    state['counts'] = dict(counts)
-    state['buckets'] = buckets
     save_ck(state)
 
     print(json.dumps(payload['meta'], ensure_ascii=False, indent=2))

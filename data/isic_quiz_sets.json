@@ -1,8 +1,8 @@
 {
   "meta": {
     "brand": "Stichting HUID",
-    "audience": "Huisartsen / AIOS dermatologie",
-    "target_per_label": 15,
+    "audience": "Huisartsen",
+    "verification": "histopathology only",
     "counts": {
       "melanoma": 18,
       "nevus": 18,
@@ -11,7 +11,6 @@
       "actinic_keratosis": 15,
       "bowen": 18
     },
-    "scanned_lesions": 2000,
     "set_sizes": {
       "mel_vs_nevus": [
         10,
@@ -29,7 +28,7 @@
         10
       ]
     },
-    "note": "Vaste quizsets (niet random)"
+    "note": "Vaste quizsets, deterministisch, geen random selectie"
   },
   "modules": {
     "mel_vs_nevus": [
