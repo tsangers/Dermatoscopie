@@ -72,16 +72,24 @@ def is_histopathology(clinical: dict) -> bool:
     return 'histopath' in conf
 
 
-def add_case(bucket: List[dict], seen: set, label: str, r: dict):
+def add_case(bucket: List[dict], seen_image_ids: set, seen_lesion_ids: set, label: str, r: dict, allow_clinical_fallback: bool = False):
     isic_id = r.get('isic_id', '')
-    if not isic_id or isic_id in seen:
+    if not isic_id or isic_id in seen_image_ids:
         return
 
     meta = r.get('metadata') or {}
     clinical = meta.get('clinical') or {}
     if not is_dermoscopic(meta):
         return
-    if not is_histopathology(clinical):
+
+    # Prefer histopathology; optionally allow clinical when needed
+    is_histo = is_histopathology(clinical)
+    if not is_histo and not allow_clinical_fallback:
+        return
+
+    lesion_id = str(clinical.get('lesion_id', '') or '')
+    # prevent near-duplicate follow-up photos of same lesion
+    if lesion_id and lesion_id in seen_lesion_ids:
         return
 
     img = ((r.get('files') or {}).get('full') or {}).get('url', '')
@@ -90,16 +98,20 @@ def add_case(bucket: List[dict], seen: set, label: str, r: dict):
 
     bucket.append({
         'id': isic_id,
+        'lesionId': lesion_id,
         'imageUrl': img,
         'diagnosis': label,
-        'source': 'histopathology'
+        'source': 'histopathology' if is_histo else 'clinical diagnosis'
     })
-    seen.add(isic_id)
+    seen_image_ids.add(isic_id)
+    if lesion_id:
+        seen_lesion_ids.add(lesion_id)
 
 
 def harvest_label(label: str, query: str, state: dict, target: int) -> List[dict]:
     bucket = state.get('buckets', {}).get(label, [])
-    seen = set(x['id'] for x in bucket)
+    seen_image_ids = set(x['id'] for x in bucket)
+    seen_lesion_ids = set(str(x.get('lesionId', '') or '') for x in bucket if x.get('lesionId'))
 
     next_key = f'next_{label}'
     next_url = state.get(next_key)
@@ -109,13 +121,14 @@ def harvest_label(label: str, query: str, state: dict, target: int) -> List[dict
     else:
         j = fetch_json(SEARCH_URL, params={'query': query, 'limit': 200})
 
+    # Pass 1: histopathology only
     while len(bucket) < target:
         results = j.get('results', [])
         if not results:
             break
 
         for r in results:
-            add_case(bucket, seen, label, r)
+            add_case(bucket, seen_image_ids, seen_lesion_ids, label, r, allow_clinical_fallback=False)
             if len(bucket) >= target:
                 break
 
@@ -128,6 +141,24 @@ def harvest_label(label: str, query: str, state: dict, target: int) -> List[dict
             break
         j = fetch_json(next_url)
         time.sleep(0.08)
+
+    # Pass 2 (fallback): allow clinical diagnosis if still too few
+    if len(bucket) < target:
+        # restart query from first page to include clinically diagnosed unique lesions
+        j = fetch_json(SEARCH_URL, params={'query': query, 'limit': 200})
+        while len(bucket) < target:
+            results = j.get('results', [])
+            if not results:
+                break
+            for r in results:
+                add_case(bucket, seen_image_ids, seen_lesion_ids, label, r, allow_clinical_fallback=True)
+                if len(bucket) >= target:
+                    break
+            nxt = j.get('next')
+            if not nxt:
+                break
+            j = fetch_json(nxt)
+            time.sleep(0.05)
 
     return bucket
 

@@ -4,12 +4,12 @@
     "audience": "Huisartsen",
     "verification": "histopathology only",
     "counts": {
-      "melanoma": 18,
-      "nevus": 18,
-      "bcc": 18,
+      "melanoma": 15,
+      "nevus": 15,
+      "bcc": 15,
       "sebaceous_hyperplasia": 9,
       "actinic_keratosis": 15,
-      "bowen": 18
+      "bowen": 15
     },
     "set_sizes": {
       "mel_vs_nevus": [
@@ -35,187 +35,217 @@
       [
         {
           "id": "ISIC_0000002",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000002.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000000",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000000.jpg",
+          "id": "ISIC_0001109",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001109.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0000004",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000004.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000001",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000001.jpg",
+          "id": "ISIC_0001111",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001111.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
-        {
-          "id": "ISIC_0000013",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000013.jpg",
-          "diagnosis": "melanoma",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0000003",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000003.jpg",
-          "diagnosis": "nevus",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0000022",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000022.jpg",
-          "diagnosis": "melanoma",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0000005",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000005.jpg",
-          "diagnosis": "nevus",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0000026",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000026.jpg",
-          "diagnosis": "melanoma",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0000006",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000006.jpg",
-          "diagnosis": "nevus",
-          "source": "ISIC API v2"
-        }
-      ],
-      [
         {
           "id": "ISIC_0000029",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000029.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000007",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000007.jpg",
+          "id": "ISIC_0001117",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001117.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000030",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000030.jpg",
+          "id": "ISIC_0000139",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000139.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000008",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000008.jpg",
+          "id": "ISIC_0001122",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001122.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000031",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000031.jpg",
+          "id": "ISIC_0000140",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000140.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000009",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000009.jpg",
+          "id": "ISIC_0001136",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001136.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0000035",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000035.jpg",
-          "diagnosis": "melanoma",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0000010",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000010.jpg",
-          "diagnosis": "nevus",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0000036",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000036.jpg",
-          "diagnosis": "melanoma",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0000011",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000011.jpg",
-          "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         }
       ],
       [
         {
-          "id": "ISIC_0000040",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000040.jpg",
+          "id": "ISIC_0000141",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000141.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000012",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000012.jpg",
+          "id": "ISIC_0001139",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001139.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000043",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000043.jpg",
+          "id": "ISIC_0000142",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000142.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000014",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000014.jpg",
+          "id": "ISIC_0001146",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001146.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000046",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000046.jpg",
+          "id": "ISIC_0000143",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000143.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000015",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000015.jpg",
+          "id": "ISIC_0001147",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001147.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000049",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000049.jpg",
+          "id": "ISIC_0000144",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000144.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000016",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000016.jpg",
+          "id": "ISIC_0001150",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001150.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000054",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000054.jpg",
+          "id": "ISIC_0000145",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000145.jpg",
           "diagnosis": "melanoma",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0000017",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000017.jpg",
+          "id": "ISIC_0001153",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001153.jpg",
           "diagnosis": "nevus",
-          "source": "ISIC API v2"
+          "source": "histopathology"
+        }
+      ],
+      [
+        {
+          "id": "ISIC_0000146",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000146.jpg",
+          "diagnosis": "melanoma",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0001155",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001155.jpg",
+          "diagnosis": "nevus",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0000147",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000147.jpg",
+          "diagnosis": "melanoma",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0001158",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001158.jpg",
+          "diagnosis": "nevus",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0000148",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000148.jpg",
+          "diagnosis": "melanoma",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0009869",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0009869.jpg",
+          "diagnosis": "nevus",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0000149",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000149.jpg",
+          "diagnosis": "melanoma",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0009870",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0009870.jpg",
+          "diagnosis": "nevus",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0000150",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000150.jpg",
+          "diagnosis": "melanoma",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0009871",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0009871.jpg",
+          "diagnosis": "nevus",
+          "source": "histopathology"
         }
       ]
     ],
@@ -223,115 +253,133 @@
       [
         {
           "id": "ISIC_0001120",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001120.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0012121",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012121.jpg",
           "diagnosis": "sebaceous_hyperplasia",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0001149",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001149.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0012142",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012142.jpg",
           "diagnosis": "sebaceous_hyperplasia",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0001159",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001159.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0012287",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012287.jpg",
           "diagnosis": "sebaceous_hyperplasia",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         }
       ],
       [
         {
           "id": "ISIC_0010515",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0010515.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0012937",
+          "lesionId": "IL_9669629",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012937.jpg",
           "diagnosis": "sebaceous_hyperplasia",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0011141",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011141.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0012943",
+          "lesionId": "IL_1243428",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012943.jpg",
           "diagnosis": "sebaceous_hyperplasia",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0011222",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011222.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0013247",
+          "lesionId": "IL_0631002",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0013247.jpg",
           "diagnosis": "sebaceous_hyperplasia",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         }
       ],
       [
         {
           "id": "ISIC_0011403",
+          "lesionId": "IL_9320857",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011403.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0014101",
+          "lesionId": "IL_2473226",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0014101.jpg",
           "diagnosis": "sebaceous_hyperplasia",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0011456",
+          "lesionId": "IL_9941908",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011456.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0165198",
+          "lesionId": "IL_8099275",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0165198.jpg",
           "diagnosis": "sebaceous_hyperplasia",
-          "source": "ISIC API v2"
+          "source": "clinical diagnosis"
         },
         {
           "id": "ISIC_0011535",
+          "lesionId": "IL_9936009",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011535.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_6026183",
+          "lesionId": "IL_6695946",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_6026183.jpg",
           "diagnosis": "sebaceous_hyperplasia",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         }
       ]
     ],
@@ -339,187 +387,217 @@
       [
         {
           "id": "ISIC_0001120",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001120.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0011593",
+          "lesionId": "IL_5043135",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011593.jpg",
           "diagnosis": "bowen",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0001149",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001149.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0011726",
+          "lesionId": "IL_0650331",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011726.jpg",
           "diagnosis": "bowen",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0001159",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001159.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0011750",
+          "lesionId": "IL_8444989",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011750.jpg",
           "diagnosis": "bowen",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0010515",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0010515.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0011751",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011751.jpg",
-          "diagnosis": "bowen",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0011141",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011141.jpg",
-          "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0012079",
+          "lesionId": "IL_9025611",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012079.jpg",
           "diagnosis": "bowen",
-          "source": "ISIC API v2"
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0011141",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011141.jpg",
+          "diagnosis": "bcc",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0014710",
+          "lesionId": "IL_9044462",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0014710.jpg",
+          "diagnosis": "bowen",
+          "source": "histopathology"
         }
       ],
       [
         {
           "id": "ISIC_0011222",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011222.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0014710",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0014710.jpg",
-          "diagnosis": "bowen",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0011403",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011403.jpg",
-          "diagnosis": "bcc",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0014789",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0014789.jpg",
-          "diagnosis": "bowen",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0011456",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011456.jpg",
-          "diagnosis": "bcc",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0015388",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0015388.jpg",
-          "diagnosis": "bowen",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0011535",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011535.jpg",
-          "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0020979",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020979.jpg",
           "diagnosis": "bowen",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0011536",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011536.jpg",
+          "id": "ISIC_0011403",
+          "lesionId": "IL_9320857",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011403.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0020980",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020980.jpg",
           "diagnosis": "bowen",
-          "source": "ISIC API v2"
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0011456",
+          "lesionId": "IL_9941908",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011456.jpg",
+          "diagnosis": "bcc",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0020981",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020981.jpg",
+          "diagnosis": "bowen",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0011535",
+          "lesionId": "IL_9936009",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011535.jpg",
+          "diagnosis": "bcc",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0020982",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020982.jpg",
+          "diagnosis": "bowen",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0011626",
+          "lesionId": "IL_3822699",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011626.jpg",
+          "diagnosis": "bcc",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0020983",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020983.jpg",
+          "diagnosis": "bowen",
+          "source": "histopathology"
         }
       ],
       [
         {
-          "id": "ISIC_0011626",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011626.jpg",
-          "diagnosis": "bcc",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0020981",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020981.jpg",
-          "diagnosis": "bowen",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0011627",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011627.jpg",
-          "diagnosis": "bcc",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0020982",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020982.jpg",
-          "diagnosis": "bowen",
-          "source": "ISIC API v2"
-        },
-        {
           "id": "ISIC_0011642",
+          "lesionId": "IL_4989541",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011642.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0020983",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020983.jpg",
-          "diagnosis": "bowen",
-          "source": "ISIC API v2"
-        },
-        {
-          "id": "ISIC_0011645",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011645.jpg",
-          "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0020984",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020984.jpg",
           "diagnosis": "bowen",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
-          "id": "ISIC_0011646",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011646.jpg",
+          "id": "ISIC_0011645",
+          "lesionId": "IL_8430898",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011645.jpg",
           "diagnosis": "bcc",
-          "source": "ISIC API v2"
+          "source": "histopathology"
         },
         {
           "id": "ISIC_0020992",
+          "lesionId": "",
           "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020992.jpg",
           "diagnosis": "bowen",
-          "source": "ISIC API v2"
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0011648",
+          "lesionId": "IL_1529294",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011648.jpg",
+          "diagnosis": "bcc",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0020993",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020993.jpg",
+          "diagnosis": "bowen",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0011730",
+          "lesionId": "IL_1154101",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011730.jpg",
+          "diagnosis": "bcc",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0020994",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020994.jpg",
+          "diagnosis": "bowen",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0011733",
+          "lesionId": "IL_2175686",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011733.jpg",
+          "diagnosis": "bcc",
+          "source": "histopathology"
+        },
+        {
+          "id": "ISIC_0021012",
+          "lesionId": "",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0021012.jpg",
+          "diagnosis": "bowen",
+          "source": "histopathology"
         }
       ]
     ]
