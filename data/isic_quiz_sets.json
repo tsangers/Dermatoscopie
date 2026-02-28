@@ -1,0 +1,528 @@
+{
+  "meta": {
+    "brand": "Stichting HUID",
+    "audience": "Huisartsen / AIOS dermatologie",
+    "target_per_label": 15,
+    "counts": {
+      "melanoma": 18,
+      "nevus": 18,
+      "bcc": 18,
+      "sebaceous_hyperplasia": 9,
+      "actinic_keratosis": 15,
+      "bowen": 18
+    },
+    "scanned_lesions": 2000,
+    "set_sizes": {
+      "mel_vs_nevus": [
+        10,
+        10,
+        10
+      ],
+      "bcc_vs_sh": [
+        6,
+        6,
+        6
+      ],
+      "ak_vs_bowen": [
+        10,
+        10,
+        10
+      ]
+    },
+    "note": "Vaste quizsets (niet random)"
+  },
+  "modules": {
+    "mel_vs_nevus": [
+      [
+        {
+          "id": "ISIC_0000002",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000002.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000000",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000000.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000004",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000004.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000001",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000001.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000013",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000013.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000003",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000003.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000022",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000022.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000005",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000005.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000026",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000026.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000006",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000006.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        }
+      ],
+      [
+        {
+          "id": "ISIC_0000029",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000029.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000007",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000007.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000030",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000030.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000008",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000008.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000031",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000031.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000009",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000009.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000035",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000035.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000010",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000010.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000036",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000036.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000011",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000011.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        }
+      ],
+      [
+        {
+          "id": "ISIC_0000040",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000040.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000012",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000012.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000043",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000043.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000014",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000014.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000046",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000046.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000015",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000015.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000049",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000049.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000016",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000016.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000054",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000054.jpg",
+          "diagnosis": "melanoma",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0000017",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0000017.jpg",
+          "diagnosis": "nevus",
+          "source": "ISIC API v2"
+        }
+      ]
+    ],
+    "bcc_vs_sh": [
+      [
+        {
+          "id": "ISIC_0001120",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001120.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0012121",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012121.jpg",
+          "diagnosis": "sebaceous_hyperplasia",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0001149",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001149.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0012142",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012142.jpg",
+          "diagnosis": "sebaceous_hyperplasia",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0001159",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001159.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0012287",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012287.jpg",
+          "diagnosis": "sebaceous_hyperplasia",
+          "source": "ISIC API v2"
+        }
+      ],
+      [
+        {
+          "id": "ISIC_0010515",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0010515.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0012937",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012937.jpg",
+          "diagnosis": "sebaceous_hyperplasia",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0011141",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011141.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0012943",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012943.jpg",
+          "diagnosis": "sebaceous_hyperplasia",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0011222",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011222.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0013247",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0013247.jpg",
+          "diagnosis": "sebaceous_hyperplasia",
+          "source": "ISIC API v2"
+        }
+      ],
+      [
+        {
+          "id": "ISIC_0011403",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011403.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0014101",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0014101.jpg",
+          "diagnosis": "sebaceous_hyperplasia",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0011456",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011456.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0165198",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0165198.jpg",
+          "diagnosis": "sebaceous_hyperplasia",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0011535",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011535.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_6026183",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_6026183.jpg",
+          "diagnosis": "sebaceous_hyperplasia",
+          "source": "ISIC API v2"
+        }
+      ]
+    ],
+    "ak_vs_bowen": [
+      [
+        {
+          "id": "ISIC_0012860",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012860.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0011593",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011593.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0015609",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0015609.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0011726",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011726.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0025992",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0025992.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0011750",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011750.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0061410",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0061410.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0011751",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011751.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0064524",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0064524.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0012079",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012079.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        }
+      ],
+      [
+        {
+          "id": "ISIC_0068175",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0068175.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0014710",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0014710.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0068419",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0068419.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0014789",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0014789.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0069544",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0069544.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0015388",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0015388.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0069656",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0069656.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0020979",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020979.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_0070260",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0070260.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0020980",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020980.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        }
+      ],
+      [
+        {
+          "id": "ISIC_0073045",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0073045.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0020981",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020981.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_1136731",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_1136731.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0020982",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020982.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_2913187",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_2913187.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0020983",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020983.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_3685033",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_3685033.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0020984",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020984.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        },
+        {
+          "id": "ISIC_6391693",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_6391693.jpg",
+          "diagnosis": "actinic_keratosis",
+          "source": "APIv2-lesions"
+        },
+        {
+          "id": "ISIC_0020992",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0020992.jpg",
+          "diagnosis": "bowen",
+          "source": "ISIC API v2"
+        }
+      ]
+    ]
+  }
+}

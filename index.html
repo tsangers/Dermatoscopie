@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dermatoscopie Oefenplatform</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <img src="./assets/stichtinghuid_logo.png" alt="Stichting HUID logo" class="brand-logo" />
+        <div>
+          <h1>Dermatoscopie oefenen</h1>
+          <p>Gemaakt door Stichting HUID · voor huisartsen</p>
+        </div>
+      </div>
+      <div class="badge">Stichting HUID</div>
+    </header>
+
+    <section id="moduleSelect" class="panel">
+      <h2>Kies een onderdeel</h2>
+      <div class="modules" id="modules"></div>
+    </section>
+
+    <section id="quizView" class="panel" hidden>
+      <div class="quiz-header">
+        <div>
+          <h2 id="quizTitle"></h2>
+          <p id="quizProgress">Vraag 1/10</p>
+        </div>
+        <div class="score-chip">Score: <span id="scoreNow">0</span></div>
+      </div>
+
+      <img id="lesionImage" class="lesion" alt="Dermatoscopische foto" />
+
+      <div id="answers" class="answers"></div>
+      <p id="feedback" class="feedback"></p>
+
+      <div class="inline-actions">
+        <button id="nextBtn" disabled>Volgende</button>
+        <button id="stopBtn" class="ghost">Stoppen</button>
+      </div>
+    </section>
+
+    <section id="summaryView" class="panel" hidden>
+      <h2>Ronde klaar</h2>
+      <p id="summaryText"></p>
+      <p id="motivation" class="motivation"></p>
+      <div class="inline-actions">
+        <button id="retryBtn">Nog een ronde</button>
+        <button id="backBtn" class="ghost">Terug naar modules</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
