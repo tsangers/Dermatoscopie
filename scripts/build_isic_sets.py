@@ -179,7 +179,7 @@ def main():
     modules = {
         'mel_vs_nevus': build_sets(buckets['melanoma'], buckets['nevus'], nsets=3),
         'bcc_vs_sh': build_sets(buckets['bcc'], buckets['sebaceous_hyperplasia'], nsets=3),
-        'ak_vs_bowen': build_sets(buckets['actinic_keratosis'], buckets['bowen'], nsets=3),
+        'bcc_vs_bowen': build_sets(buckets['bcc'], buckets['bowen'], nsets=3),
     }
 
     set_sizes = {k: [len(s) for s in v] for k, v in modules.items()}

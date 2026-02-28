@@ -22,7 +22,7 @@
         6,
         6
       ],
-      "ak_vs_bowen": [
+      "bcc_vs_bowen": [
         10,
         10,
         10
@@ -335,13 +335,13 @@
         }
       ]
     ],
-    "ak_vs_bowen": [
+    "bcc_vs_bowen": [
       [
         {
-          "id": "ISIC_0012860",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0012860.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0001120",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001120.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0011593",
@@ -350,10 +350,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_0015609",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0015609.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0001149",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001149.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0011726",
@@ -362,10 +362,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_0025992",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0025992.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0001159",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0001159.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0011750",
@@ -374,10 +374,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_0061410",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0061410.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0010515",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0010515.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0011751",
@@ -386,10 +386,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_0064524",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0064524.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011141",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011141.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0012079",
@@ -400,10 +400,10 @@
       ],
       [
         {
-          "id": "ISIC_0068175",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0068175.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011222",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011222.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0014710",
@@ -412,10 +412,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_0068419",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0068419.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011403",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011403.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0014789",
@@ -424,10 +424,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_0069544",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0069544.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011456",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011456.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0015388",
@@ -436,10 +436,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_0069656",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0069656.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011535",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011535.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0020979",
@@ -448,10 +448,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_0070260",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0070260.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011536",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011536.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0020980",
@@ -462,10 +462,10 @@
       ],
       [
         {
-          "id": "ISIC_0073045",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0073045.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011626",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011626.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0020981",
@@ -474,10 +474,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_1136731",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_1136731.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011627",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011627.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0020982",
@@ -486,10 +486,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_2913187",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_2913187.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011642",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011642.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0020983",
@@ -498,10 +498,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_3685033",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_3685033.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011645",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011645.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0020984",
@@ -510,10 +510,10 @@
           "source": "ISIC API v2"
         },
         {
-          "id": "ISIC_6391693",
-          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_6391693.jpg",
-          "diagnosis": "actinic_keratosis",
-          "source": "APIv2-lesions"
+          "id": "ISIC_0011646",
+          "imageUrl": "https://isic-archive.s3.amazonaws.com/images/ISIC_0011646.jpg",
+          "diagnosis": "bcc",
+          "source": "ISIC API v2"
         },
         {
           "id": "ISIC_0020992",

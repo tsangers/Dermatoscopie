@@ -1,7 +1,7 @@
 const MODULES = {
   mel_vs_nevus: { title: 'Melanoom vs Naevi' },
   bcc_vs_sh: { title: 'BCC vs Talgklierhyperplasie' },
-  ak_vs_bowen: { title: 'AK vs Bowen' }
+  bcc_vs_bowen: { title: 'BCC vs Bowen' }
 };
 
 const LABEL_TEXT = {
